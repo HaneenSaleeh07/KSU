@@ -7,24 +7,24 @@
 <title>KSU Arena</title>
 <style>
 :root {
-  --navy:       #071a0f;
-  --navy2:      #0d2618;
-  --navy3:      #143324;
-  --navy4:      #1e4d35;
-  --teal:       #3a8c6a;
-  --teal-light: #6ecf9a;
-  --gold:       #6ecf9a;
-  --gold-light: #90ddb4;
-  --white:      #f4fff8;
-  --muted:      #8abea0;
-  --border:     rgba(110,207,154,0.22);
-  --border2:    rgba(110,207,154,0.28);
-  --card-bg:    rgba(14,34,22,0.97);
+  --navy:       #0a0f0d;
+  --navy2:      #111a14;
+  --navy3:      #1a2e20;
+  --navy4:      #1e472a;
+  --teal:       #2d6a4f;
+  --teal-light: #52b788;
+  --gold:       #52b788;
+  --gold-light: #74c69d;
+  --white:      #ffffff;
+  --muted:      #a8c5b0;
+  --border:     rgba(82,183,136,0.25);
+  --border2:    rgba(82,183,136,0.3);
+  --card-bg:    #111a14;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html, body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: var(--navy); color: var(--white);
+  background: var(--navy); color: #ffffff;
   direction: rtl; min-height: 100vh;
   overflow-x: hidden; width: 100%;
 }
@@ -34,8 +34,8 @@ body::before {
 content: ‘’;
 position: fixed; inset: 0; z-index: 0;
 background-image:
-radial-gradient(circle at 15% 85%, rgba(110,207,154,0.1) 0%, transparent 50%),
-radial-gradient(circle at 85% 15%, rgba(58,140,106,0.08) 0%, transparent 50%),
+radial-gradient(circle at 15% 85%, rgba(82,183,136,0.08) 0%, transparent 50%),
+radial-gradient(circle at 85% 15%, rgba(82,183,136,0.06) 0%, transparent 50%),
 radial-gradient(circle at 50% 50%, rgba(5,13,8,0.8) 0%, transparent 70%);
 pointer-events: none;
 }
@@ -69,7 +69,7 @@ display: flex; align-items: center; gap: 10px; flex-shrink: 0;
 }
 .arena-logo img {
 height: 44px; border-radius: 6px;
-filter: drop-shadow(0 0 6px rgba(110,207,154,0.35));
+filter: drop-shadow(0 0 6px rgba(82,183,136,0.35));
 transition: filter 0.4s;
 }
 .arena-logo img:hover { filter: drop-shadow(0 0 10px rgba(201,168,76,0.4)); }
@@ -79,7 +79,7 @@ background: linear-gradient(to bottom, transparent, var(–teal), transparent);
 opacity: 0.6; margin: 0 4px;
 }
 .logo-text { direction: ltr; line-height: 1.15; }
-.logo-text .k { font-size: 1.2rem; font-weight: 800; color: var(–white); letter-spacing: 0.5px; }
+.logo-text .k { font-size: 1.2rem; font-weight: 800; color: #ffffff; letter-spacing: 0.5px; }
 .logo-text .a { font-size: 0.85rem; font-weight: 600; color: var(–teal-light); letter-spacing: 3px; }
 
 .nav-links {
@@ -94,7 +94,7 @@ cursor: pointer; font-family: inherit; white-space: nowrap; transition: all 0.25
 }
 .nav-links button:hover { color: var(–teal-light); background: rgba(82,183,136,0.08); }
 .nav-links button.active {
-color: var(–white); background: rgba(110,207,154,0.18);
+color: #ffffff; background: rgba(82,183,136,0.18);
 border-bottom: 2px solid var(–teal);
 }
 
@@ -132,7 +132,7 @@ font-size: 0.78rem; color: var(–muted);
 .hero-badge strong { color: var(–teal-light); }
 .hero h1 {
 font-size: clamp(1.9rem, 6vw, 3rem); font-weight: 800;
-color: var(–white); margin-bottom: 12px; line-height: 1.1;
+color: #ffffff; margin-bottom: 12px; line-height: 1.1;
 }
 .hero h1 em { color: var(–teal-light); font-style: normal; }
 .hero p {
@@ -177,7 +177,7 @@ transition: background 0.2s;
 .how { padding: 32px 16px; }
 .section-title {
 text-align: center; font-size: clamp(1rem,3.5vw,1.4rem);
-font-weight: 700; color: var(–white);
+font-weight: 700; color: #ffffff;
 margin-bottom: 24px; position: relative;
 }
 .section-title::after {
@@ -204,7 +204,7 @@ line-height: 1; pointer-events: none;
 /* ── PAGE ── */
 .page { padding: 16px; width: 100%; }
 .page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; }
-.page-header h2 { font-size: clamp(0.95rem,3.5vw,1.2rem); font-weight: 700; color: var(–white); }
+.page-header h2 { font-size: clamp(0.95rem,3.5vw,1.2rem); font-weight: 700; color: #ffffff; }
 .page-header h2 span { color: var(–teal-light); }
 
 /* KPI CARDS */
@@ -231,7 +231,7 @@ background: var(–card-bg); border: 1px solid var(–border);
 border-radius: 8px; padding: 14px; overflow: hidden;
 }
 .panel h3 {
-font-size: 0.85rem; font-weight: 600; color: var(–white);
+font-size: 0.85rem; font-weight: 600; color: #ffffff;
 margin-bottom: 12px; padding-bottom: 8px;
 border-bottom: 1px solid var(–border);
 display: flex; align-items: center; gap: 6px;
@@ -242,15 +242,15 @@ padding: 8px 0; border-bottom: 1px solid rgba(82,183,136,0.07);
 gap: 8px; flex-wrap: wrap; transition: background 0.15s;
 }
 .t-row:last-child { border: none; }
-.t-name { font-size: 0.8rem; font-weight: 600; color: var(–white); }
+.t-name { font-size: 0.8rem; font-weight: 600; color: #ffffff; }
 .t-meta { font-size: 0.68rem; color: var(–muted); }
 .badge {
 padding: 3px 9px; border-radius: 4px; font-size: 0.65rem;
 font-weight: 600; white-space: nowrap; flex-shrink: 0; letter-spacing: 0.3px;
 }
-.badge.open { background: rgba(110,207,154,0.22); color: var(–teal-light); border: 1px solid rgba(110,207,154,0.35); }
-.badge.club { background: rgba(110,207,154,0.14); color: var(–gold-light); border: 1px solid var(–border2); }
-.badge.soon { background: rgba(82,183,136,0.06); color: #aaa; border: 1px solid rgba(110,207,154,0.22); }
+.badge.open { background: rgba(82,183,136,0.22); color: var(–teal-light); border: 1px solid rgba(82,183,136,0.35); }
+.badge.club { background: rgba(82,183,136,0.14); color: var(–gold-light); border: 1px solid var(–border2); }
+.badge.soon { background: rgba(82,183,136,0.06); color: #aaa; border: 1px solid rgba(82,183,136,0.22); }
 
 /* TALENT */
 .talent-banner {
@@ -282,7 +282,7 @@ border: 1px solid var(–border);
 }
 .player-card.top .player-avatar { border-color: var(–gold); }
 .player-rank { font-size: 0.65rem; color: var(–gold-light); font-weight: 600; margin-bottom: 4px; }
-.player-name { font-size: 0.82rem; font-weight: 700; margin-bottom: 2px; color: var(–white); }
+.player-name { font-size: 0.82rem; font-weight: 700; margin-bottom: 2px; color: #ffffff; }
 .player-college { font-size: 0.65rem; color: var(–muted); margin-bottom: 10px; }
 .player-score { font-size: 1.4rem; font-weight: 800; color: var(–teal-light); }
 .player-score-label { font-size: 0.62rem; color: var(–muted); }
@@ -290,7 +290,7 @@ border: 1px solid var(–border);
 display: flex; justify-content: space-around; margin-top: 10px;
 padding-top: 8px; border-top: 1px solid var(–border);
 }
-.ps .v { font-size: 0.8rem; font-weight: 700; color: var(–white); }
+.ps .v { font-size: 0.8rem; font-weight: 700; color: #ffffff; }
 .ps .l { font-size: 0.58rem; color: var(–muted); }
 
 /* CLUBS */
@@ -303,7 +303,7 @@ cursor: pointer; transition: all 0.25s;
 .club-card:hover { border-color: var(–teal); transform: translateY(-2px); }
 .club-card.new { border-style: dashed; }
 .club-icon { font-size: 1.7rem; margin-bottom: 8px; }
-.club-name { font-size: 0.82rem; font-weight: 600; color: var(–white); margin-bottom: 3px; }
+.club-name { font-size: 0.82rem; font-weight: 600; color: #ffffff; margin-bottom: 3px; }
 .club-desc { font-size: 0.7rem; color: var(–muted); margin-bottom: 6px; }
 .club-count { font-size: 0.68rem; color: var(–teal-light); font-weight: 600; }
 
@@ -360,7 +360,7 @@ cursor: pointer; font-family: inherit; transition: all 0.25s;
 
 /* ── AI PILOT ── */
 @keyframes logoGlow {
-0%, 100% { filter: drop-shadow(0 0 6px rgba(110,207,154,0.38)); }
+0%, 100% { filter: drop-shadow(0 0 6px rgba(82,183,136,0.38)); }
 50% { filter: drop-shadow(0 0 14px rgba(82,183,136,0.55)); }
 }
 
@@ -374,7 +374,7 @@ background: linear-gradient(135deg, var(–navy3), var(–navy4));
 border: 1px solid var(–teal);
 cursor: pointer; display: flex; align-items: center; justify-content: center;
 font-size: 1.3rem; transition: all 0.3s;
-box-shadow: 0 4px 20px rgba(0,0,0,0.4), 0 0 16px rgba(110,207,154,0.22);
+box-shadow: 0 4px 20px rgba(0,0,0,0.4), 0 0 16px rgba(82,183,136,0.22);
 animation: fabFloat 4s ease-in-out infinite;
 }
 .ai-fab-btn:hover {
@@ -412,7 +412,7 @@ background: var(–teal); display: flex; align-items: center;
 justify-content: center; font-size: 1rem; flex-shrink: 0;
 border: 1px solid rgba(42,157,143,0.4);
 }
-.chat-head-info h4 { font-size: 0.82rem; font-weight: 600; color: var(–white); }
+.chat-head-info h4 { font-size: 0.82rem; font-weight: 600; color: #ffffff; }
 .chat-head-info p { font-size: 0.62rem; color: var(–muted); }
 .online { width: 7px; height: 7px; border-radius: 50%; background: var(–teal-light); margin-right: auto; animation: blink 2s infinite; }
 @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
@@ -423,14 +423,14 @@ border: 1px solid rgba(42,157,143,0.4);
 .b-bub {
 background: rgba(13,31,23,0.9); border: 1px solid var(–border);
 border-radius: 2px 8px 8px 8px; padding: 8px 11px;
-font-size: 0.78rem; line-height: 1.55; color: var(–white);
+font-size: 0.78rem; line-height: 1.55; color: #ffffff;
 max-width: 210px; direction: rtl;
 }
 .u-msg { display:flex; justify-content:flex-end; margin-bottom:10px; }
 .u-bub {
-background: rgba(110,207,154,0.22); border: 1px solid rgba(110,207,154,0.35);
+background: rgba(82,183,136,0.22); border: 1px solid rgba(82,183,136,0.35);
 border-radius: 8px 8px 2px 8px; padding: 8px 11px;
-font-size: 0.78rem; color: var(–white); direction: rtl; max-width: 210px;
+font-size: 0.78rem; color: #ffffff; direction: rtl; max-width: 210px;
 }
 .typing { display:flex; gap:4px; padding:4px 6px; align-items:center; }
 .typing span {
@@ -447,7 +447,7 @@ border-radius: 6px; padding: 8px 12px; font-size: 0.76rem;
 color: var(–teal-light); cursor: pointer; text-align: right;
 font-family: inherit; direction: rtl; transition: all 0.2s; width: 100%;
 }
-.sugg-btn:hover { background: rgba(110,207,154,0.14); border-color: var(–teal); }
+.sugg-btn:hover { background: rgba(82,183,136,0.14); border-color: var(–teal); }
 
 /* ── DESKTOP ── */
 @media (min-width: 768px) {
@@ -475,8 +475,8 @@ background: repeating-linear-gradient(
 0deg,
 transparent,
 transparent 3px,
-rgba(110,207,154,0.025) 3px,
-rgba(110,207,154,0.025) 4px
+rgba(82,183,136,0.03) 3px,
+rgba(82,183,136,0.03) 4px
 );
 pointer-events: none;
 }
@@ -490,22 +490,22 @@ content: ‘’;
 position: absolute;
 bottom: 6px; left: 6px;
 width: 10px; height: 10px;
-border-bottom: 1px solid rgba(110,207,154,0.5);
-border-left: 1px solid rgba(110,207,154,0.5);
+border-bottom: 1px solid rgba(82,183,136,0.5);
+border-left: 1px solid rgba(82,183,136,0.5);
 border-radius: 0 0 0 2px;
 pointer-events: none;
 }
 
 /* Glowing border on hover */
 .step-card:hover, .kpi:hover, .player-card:hover, .club-card:hover {
-box-shadow: 0 0 16px rgba(110,207,154,0.18), 0 4px 20px rgba(0,0,0,0.3);
+box-shadow: 0 0 16px rgba(82,183,136,0.18), 0 4px 20px rgba(0,0,0,0.3);
 }
 
 /* Active nav button - gaming underline effect */
 .nav-links button.active {
 position: relative;
 color: var(–teal-light) !important;
-background: rgba(110,207,154,0.14) !important;
+background: rgba(82,183,136,0.14) !important;
 }
 .nav-links button.active::after {
 content: ‘’;
@@ -518,17 +518,17 @@ animation: navPulse 2s ease-in-out infinite;
 }
 @keyframes navPulse {
 0%, 100% { opacity: 0.5; }
-50% { opacity: 1; box-shadow: 0 1px 8px rgba(110,207,154,0.5); }
+50% { opacity: 1; box-shadow: 0 1px 8px rgba(82,183,136,0.5); }
 }
 
 /* Stats numbers - subtle count-up glow */
 .stat .n {
-text-shadow: 0 0 20px rgba(110,207,154,0.38);
+text-shadow: 0 0 20px rgba(82,183,136,0.38);
 animation: statGlow 3s ease-in-out infinite;
 }
 @keyframes statGlow {
-0%, 100% { text-shadow: 0 0 10px rgba(110,207,154,0.28); }
-50% { text-shadow: 0 0 24px rgba(110,207,154,0.6); }
+0%, 100% { text-shadow: 0 0 10px rgba(82,183,136,0.28); }
+50% { text-shadow: 0 0 24px rgba(82,183,136,0.6); }
 }
 
 /* Hero title subtle shimmer */
@@ -549,8 +549,8 @@ animation: shimmer 3s linear infinite;
 animation: linePulse 2.5s ease-in-out infinite;
 }
 @keyframes linePulse {
-0%, 100% { width: 36px; opacity: 0.7; }
-50% { width: 68px; opacity: 1; }
+0%, 100% { width: 32px; opacity: 0.7; }
+50% { width: 56px; opacity: 1; }
 }
 
 /* Button press effect */
@@ -567,14 +567,14 @@ height: 60%;
 
 /* Player card top badge glow */
 .player-card.top {
-box-shadow: 0 0 20px rgba(110,207,154,0.14);
+box-shadow: 0 0 20px rgba(82,183,136,0.14);
 }
 .player-card.top .player-avatar {
 animation: avatarGlow 3s ease-in-out infinite;
 }
 @keyframes avatarGlow {
-0%, 100% { box-shadow: 0 0 8px rgba(110,207,154,0.28); }
-50% { box-shadow: 0 0 18px rgba(110,207,154,0.6); }
+0%, 100% { box-shadow: 0 0 8px rgba(82,183,136,0.28); }
+50% { box-shadow: 0 0 18px rgba(82,183,136,0.6); }
 }
 
 /* FAB button - softer pulse ring */
@@ -584,7 +584,7 @@ animation: fabFloat 4s ease-in-out infinite !important;
 .ai-fab-btn::before {
 content: ‘’;
 position: absolute; inset: -6px; border-radius: 50%;
-border: 1px solid rgba(110,207,154,0.35);
+border: 1px solid rgba(82,183,136,0.35);
 animation: fabRing 3s ease-out infinite;
 }
 @keyframes fabRing {
@@ -594,7 +594,7 @@ animation: fabRing 3s ease-out infinite;
 
 /* Chat window border glow */
 .chat-win {
-box-shadow: 0 16px 48px rgba(0,0,0,0.5), 0 0 0 1px rgba(110,207,154,0.22) !important;
+box-shadow: 0 16px 48px rgba(0,0,0,0.5), 0 0 0 1px rgba(82,183,136,0.22) !important;
 }
 
 /* Talent banner left border pulse */
@@ -602,8 +602,8 @@ box-shadow: 0 16px 48px rgba(0,0,0,0.5), 0 0 0 1px rgba(110,207,154,0.22) !impor
 animation: bannerBorder 3s ease-in-out infinite;
 }
 @keyframes bannerBorder {
-0%, 100% { border-right-color: rgba(110,207,154,0.65); }
-50% { border-right-color: rgba(110,207,154,1); }
+0%, 100% { border-right-color: rgba(82,183,136,0.65); }
+50% { border-right-color: rgba(82,183,136,1); }
 }
 
 /* Hero badge subtle glow */
@@ -612,7 +612,7 @@ animation: badgePulse 4s ease-in-out infinite;
 }
 @keyframes badgePulse {
 0%, 100% { border-color: rgba(82,183,136,0.18); }
-50% { border-color: rgba(110,207,154,0.55); }
+50% { border-color: rgba(82,183,136,0.55); }
 }
 </style>
 
