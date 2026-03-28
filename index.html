@@ -132,12 +132,96 @@ padding: 12px 24px; border-radius: 50px; margin-bottom: 28px;
 .divider { text-align: center; color: #333; font-size: 0.8rem; margin: 10px 0; }
 .email-btn { width: 100%; background: transparent; color: #52b788; border: 2px solid #2d6a4f; padding: 11px; border-radius: 10px; font-size: 0.9rem; cursor: pointer; font-family: inherit; }
 .login-note { text-align: center; color: #444; font-size: 0.75rem; margin-top: 14px; }
+
+/* ========== RESPONSIVE: TABLET & MOBILE ========== */
+
+/* Tablet (iPad) - max 1024px */
+@media (max-width: 1024px) {
+.steps { grid-template-columns: repeat(2, 1fr); }
+.cards3 { grid-template-columns: repeat(2, 1fr); }
+.two { grid-template-columns: 1fr; }
+.players-grid { grid-template-columns: repeat(2, 1fr); }
+.clubs-grid { grid-template-columns: repeat(3, 1fr); }
+.page { padding: 20px 24px; }
+.how { padding: 36px 24px; }
+.hero { padding: 50px 24px 40px; }
+.hero h1 { font-size: 2.6rem; }
+.stats-bar { gap: 24px; }
+}
+
+/* Mobile - max 768px */
+@media (max-width: 768px) {
+
+/* NAV mobile */
+nav {
+height: auto !important;
+padding: 10px 14px !important;
+flex-wrap: wrap;
+gap: 8px;
+direction: rtl !important;
+}
+nav > div:first-child { order: 1; }
+nav > div:nth-child(2) { order: 2; font-size: 1.1rem !important; }
+nav > div:nth-child(3) { order: 3; width: 100%; justify-content: center; flex-wrap: wrap; direction: rtl; }
+.nav-right { flex-wrap: wrap; justify-content: center; gap: 4px; width: 100%; }
+.nav-right button { font-size: 0.75rem !important; padding: 6px 10px !important; }
+
+/* Hero */
+.hero { padding: 36px 16px 28px; }
+.hero h1 { font-size: 2rem; }
+.hero p { font-size: 0.9rem; }
+.hero-btns { flex-direction: column; align-items: center; gap: 10px; }
+.btn-g, .btn-o { width: 100%; max-width: 280px; text-align: center; }
+.hero-brand { padding: 10px 16px; gap: 10px; }
+.hero-brand .txt .t2 { font-size: 0.88rem; }
+
+/* Stats */
+.stats-bar { gap: 16px; padding: 16px; flex-wrap: wrap; justify-content: center; }
+.stat .n { font-size: 1.4rem; }
+
+/* Steps */
+.steps { grid-template-columns: 1fr 1fr; gap: 10px; }
+.step-card { padding: 14px; }
+.step-card .num { font-size: 1.5rem; }
+.how { padding: 28px 16px; }
+
+/* Dashboard */
+.page { padding: 16px; }
+.cards3 { grid-template-columns: 1fr; }
+.two { grid-template-columns: 1fr; }
+.page-header { flex-direction: column; align-items: flex-end; gap: 10px; }
+.kpi .val { font-size: 1.4rem; }
+
+/* Talent */
+.players-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+.player-card { padding: 12px; }
+.talent-header { flex-direction: column; text-align: center; padding: 16px; }
+
+/* Clubs */
+.clubs-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+.club-card { padding: 14px; }
+.club-icon { font-size: 1.8rem; }
+
+/* Login */
+.login-box { width: 90%; padding: 24px; }
+}
+
+/* Small mobile - max 480px */
+@media (max-width: 480px) {
+.hero h1 { font-size: 1.7rem; }
+.steps { grid-template-columns: 1fr; }
+.players-grid { grid-template-columns: 1fr; }
+.clubs-grid { grid-template-columns: 1fr 1fr; }
+.stats-bar { grid-template-columns: repeat(2, 1fr); display: grid; }
+.t-row { flex-direction: column; align-items: flex-end; gap: 4px; }
+.badge { margin-top: 4px; }
+}
 </style>
 
 </head>
 <body>
 
-<nav style="background:linear-gradient(135deg,#0d1f17,#1a472a); padding:0 20px; height:68px; display:flex; align-items:center; justify-content:space-between; box-shadow:0 2px 20px rgba(0,0,0,0.4); position:sticky; top:0; z-index:100; border-bottom:2px solid #2d6a4f; direction:ltr;">
+<nav style="background:linear-gradient(135deg,#0d1f17,#1a472a); padding:0 20px; min-height:68px; display:flex; align-items:center; justify-content:space-between; box-shadow:0 2px 20px rgba(0,0,0,0.4); position:sticky; top:0; z-index:100; border-bottom:2px solid #2d6a4f; direction:ltr; flex-wrap:wrap;">
 
   <!-- LEFT: KSU Arena title -->
 
